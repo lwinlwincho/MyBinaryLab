@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv_classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_big"
+            android:text="@string/classroom_page"
+            android:textAppearance="@style/Theme.MyBinaryLab.CategoryTitle" />
+
+        <ImageView
+            android:id="@+id/iv_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_classroom"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_big"
+            android:src="@drawable/ic_page_indicatior" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_big"
+            android:src="@drawable/ic_noti_bell" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="6"
+                tools:listitem="@layout/category_item" />
+
+            <TextView
+                android:id="@+id/tv_see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:background="@drawable/bg_see_more"
+                android:paddingHorizontal="@dimen/margin_normal"
+                android:paddingVertical="@dimen/margin_x_tiny"
+                android:text="See More ^"
+                android:textAppearance="@style/Theme.MyBinaryLab.SeeMore" />
+
+            <TextView
+                android:id="@+id/tv_see_less"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:background="@drawable/bg_see_more"
+                android:paddingHorizontal="@dimen/margin_normal"
+                android:paddingVertical="@dimen/margin_x_tiny"
+                android:text="See Less ^"
+                android:textAppearance="@style/Theme.MyBinaryLab.SeeMore"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_popular_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_big"
+                android:text="@string/popular_course"
+                android:textAppearance="@style/Theme.MyBinaryLab.PopularCourseTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="@dimen/margin_medium"
+                tools:itemCount="6"
+                tools:listitem="@layout/popular_item" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

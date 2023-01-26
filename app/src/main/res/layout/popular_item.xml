@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_popular_course"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="327:168"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_card_heading" />
+
+    <TextView
+        android:id="@+id/tv_popular_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="@string/popular_subtitle"
+        android:textAppearance="@style/Theme.MyBinaryLab.PopularCourseSubTitle"
+        app:layout_constraintTop_toBottomOf="@+id/iv_popular_course" />
+
+    <ImageView
+        android:id="@+id/iv_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x_small"
+        app:layout_constraintStart_toStartOf="@+id/tv_popular_sub_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_popular_sub_title"
+        android:src="@drawable/ic_connection" />
+
+    <TextView
+        android:id="@+id/tv_intermediate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_x_small"
+        android:layout_marginTop="8dp"
+        android:text="@string/intermediate"
+        android:textAppearance="@style/Theme.MyBinaryLab.PopularCourseBodyIntermediate"
+        app:layout_constraintBottom_toBottomOf="@id/iv_connection"
+        app:layout_constraintStart_toEndOf="@+id/iv_connection"
+        app:layout_constraintTop_toBottomOf="@+id/tv_popular_sub_title" />
+
+    <ImageView
+        android:id="@+id/iv_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_x_small"
+        app:layout_constraintBottom_toBottomOf="@id/tv_intermediate"
+        app:layout_constraintStart_toEndOf="@+id/tv_intermediate"
+        app:layout_constraintTop_toTopOf="@+id/tv_intermediate"
+        android:src="@drawable/ic_space" />
+
+    <TextView
+        android:id="@+id/tv_writing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_x_small"
+        android:text="@string/writing"
+        android:textAppearance="@style/Theme.MyBinaryLab.PopularCourseBodyWriting"
+        app:layout_constraintBottom_toBottomOf="@id/tv_intermediate"
+        app:layout_constraintStart_toEndOf="@+id/iv_dot"
+        app:layout_constraintTop_toTopOf="@+id/tv_intermediate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

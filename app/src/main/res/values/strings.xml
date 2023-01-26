@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyBinaryLab</string>
+    <string name="classroom_page">Classroom Page</string>
+    <string name="popular_course">Popular Course</string>
+    <string name="popular_subtitle">How to write English Better</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="writing">Writing</string>
+</resources>
